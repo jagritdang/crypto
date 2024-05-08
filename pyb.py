@@ -16,7 +16,7 @@ def write_csv():
     global pymexc_ask, pymexc_bid, okx_ask, okx_bid, pybit_ask, pybit_bid, binance_ask, binance_bid
     with open('spread.csv', 'a', newline='') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow([datetime.datetime.now(),pybit_bid-okx_ask, okx_bid -pybit_ask, pybit_bid-pymexc_ask, pymexc_bid - pybit_ask, pybit_bid-binance_ask, binance_bid -pybit_ask,  okx_bid-pybit_ask, pybit_bid - okx_ask,  okx_bid-pymexc_ask, pymexc_bid-okx_ask, okx_bid-binance_ask, binance_bid- okx_ask, pymexc_bid-pybit_ask, pybit_bid - pymexc_ask, pymexc_bid-okx_ask, okx_bid-pymexc_ask,pymexc_bid-binance_ask, binance_bid-pymexc_ask, binance_bid-pybit_ask,pybit_bid-binance_ask, binance_bid-okx_ask,okx_bid-binance_ask, binance_bid-pymexc_ask, pymexc_bid-binance_ask])
+        writer.writerow([datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M:%S.%f'),pybit_bid-okx_ask, okx_bid -pybit_ask, pybit_bid-pymexc_ask, pymexc_bid - pybit_ask, pybit_bid-binance_ask, binance_bid -pybit_ask,  okx_bid-pybit_ask, pybit_bid - okx_ask,  okx_bid-pymexc_ask, pymexc_bid-okx_ask, okx_bid-binance_ask, binance_bid- okx_ask, pymexc_bid-pybit_ask, pybit_bid - pymexc_ask, pymexc_bid-okx_ask, okx_bid-pymexc_ask,pymexc_bid-binance_ask, binance_bid-pymexc_ask, binance_bid-pybit_ask,pybit_bid-binance_ask, binance_bid-okx_ask,okx_bid-binance_ask, binance_bid-pymexc_ask, pymexc_bid-binance_ask])
 
 
 
